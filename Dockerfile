@@ -15,3 +15,7 @@ RUN \
         openssh zsh python python-pip python-pipx \
         speedtest-cli rsync the_silver_searcher \
         tmate
+
+# Install Nvidia packages
+RUN pacman -S --noconfirm \
+    nvidia nvidia-utils nvidia-settings
