@@ -20,3 +20,6 @@ RUN \
 RUN pacman -S --noconfirm \
     nvidia nvidia-utils nvidia-settings \
     cuda
+
+# Update library path for cuda
+ENV LD_LIBRARY_PATH /usr/lib:/usr/local/lib:/opt/cuda/targets/x86_64-linux/lib:/opt/cuda/targets/x86_64-linux/lib/stubs
