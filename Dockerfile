@@ -4,6 +4,9 @@ FROM archlinux:base-devel
 # Image maintainer
 LABEL maintainer='Sushrut1101 <guptasushrut@gmail.com>'
 
+# Uncomment the multilib repo, incase it was commented out
+RUN sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
+
 # Install basic packages
 RUN \
     pacman -Syyu --noconfirm \
