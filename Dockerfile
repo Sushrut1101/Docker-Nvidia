@@ -18,4 +18,5 @@ RUN \
 
 # Install Nvidia packages
 RUN pacman -S --noconfirm \
-    nvidia nvidia-utils nvidia-settings
+    nvidia nvidia-utils nvidia-settings \
+    cuda
